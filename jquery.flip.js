@@ -311,13 +311,13 @@ $.fn.flip = function(settings){
             $clone.dequeue();
         });
 
-        $clone.animate(dirOption.first,flipObj.speed);
+        $clone.animate(dirOption.first,flipObj.speed, 'linear');
 
         $clone.queue(function(){
             flipObj.onAnimation($clone,$this);
             $clone.dequeue();
         });
-        $clone.animate(dirOption.second,flipObj.speed);
+        $clone.animate(dirOption.second, flipObj.speed, 'linear');
 
         $clone.queue(function(){
             if (!flipObj.dontChangeColor) {
