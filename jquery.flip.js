@@ -326,7 +326,9 @@ $.fn.flip = function(settings){
             $this.css({visibility: "visible"});
 
             var nC = newContent();
-            if(nC){$this.html(nC);}
+            if(nC){
+                $this.html(nC);
+            }
             $clone.remove();
             flipObj.onEnd($clone,$this);
             $this.removeData('flipLock');
